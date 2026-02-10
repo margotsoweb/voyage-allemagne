@@ -1,192 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Voyage Allemagne</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-min-height: 100vh;
-padding: 30px 15px;
-color: #2c3e50;
-}
-.container { max-width: 1200px; margin: 0 auto; }
-.header {
-text-align: center;
-color: white;
-margin-bottom: 40px;
-}
-.header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-.header p { font-size: 1.1rem; }
-.days-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 25px;
-margin-bottom: 40px;
-}
-.day-card {
-background: white;
-border-radius: 15px;
-overflow: hidden;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-.day-header {
-color: white;
-padding: 25px;
-position: relative;
-}
-.day-card:nth-child(1) .day-header { background: linear-gradient(135deg, #4facfe, #00f2fe); }
-.day-card:nth-child(2) .day-header { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-.day-card:nth-child(3) .day-header { background: linear-gradient(135deg, #fa709a, #fee140); }
-.day-number { font-size: 3.5rem; font-weight: 900; opacity: 0.2; position: absolute; right: 15px; top: 5px; }
-.day-info { position: relative; z-index: 1; }
-.day-date { font-size: 0.95rem; margin-bottom: 5px; }
-.day-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 5px; }
-.day-subtitle { font-size: 0.9rem; opacity: 0.9; font-style: italic; }
-.day-content { padding: 20px; }
-.activity {
-display: flex;
-gap: 12px;
-padding: 12px;
-background: #f8f9ff;
-border-left: 4px solid #4facfe;
-margin-bottom: 10px;
-border-radius: 8px;
-}
-.day-card:nth-child(2) .activity { border-left-color: #43e97b; }
-.day-card:nth-child(3) .activity { border-left-color: #fa709a; }
-.time { font-weight: 700; color: #4facfe; min-width: 70px; font-size: 0.9rem; }
-.day-card:nth-child(2) .time { color: #43e97b; }
-.day-card:nth-child(3) .time { color: #fa709a; }
-.activity-info { flex: 1; }
-.activity-name { font-weight: 600; color: #2c3e50; font-size: 0.95rem; }
-.activity-detail { font-size: 0.85rem; color: #666; margin-top: 2px; }
-.hotel {
-background: linear-gradient(135deg, #FFE66D, #FFED4E);
-padding: 15px;
-border-radius: 8px;
-font-weight: 600;
-color: #2E5090;
-text-align: center;
-margin-top: 15px;
-font-size: 0.9rem;
-}
-.summary { background: white; border-radius: 15px; padding: 30px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-.summary-title { text-align: center; font-size: 1.5rem; color: #2E5090; margin-bottom: 20px; }
-.summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-.summary-card { background: linear-gradient(135deg, #f0f4f8, #e8eef5); padding: 20px; border-radius: 10px; text-align: center; }
-.summary-value { font-size: 2rem; font-weight: 900; color: #4facfe; }
-.summary-label { font-size: 0.9rem; color: #666; margin-top: 5px; }
-.footer { text-align: center; color: white; margin-top: 50px; font-size: 1.2rem; font-weight: 600; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Voyage Allemagne</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 30px 15px;
+            color: #2c3e50;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { font-size: 1.1rem; }
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .day-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .day-header {
+            color: white;
+            padding: 25px;
+            position: relative;
+        }
+        .day-card:nth-child(1) .day-header { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .day-card:nth-child(2) .day-header { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .day-card:nth-child(3) .day-header { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .day-number { font-size: 3.5rem; font-weight: 900; opacity: 0.2; position: absolute; right: 15px; top: 5px; }
+        .day-info { position: relative; z-index: 1; }
+        .day-date { font-size: 0.95rem; margin-bottom: 5px; }
+        .day-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 5px; }
+        .day-subtitle { font-size: 0.9rem; opacity: 0.9; font-style: italic; }
+        .day-content { padding: 20px; }
+        .activity {
+            display: flex;
+            gap: 12px;
+            padding: 12px;
+            background: #f8f9ff;
+            border-left: 4px solid #4facfe;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .day-card:nth-child(2) .activity { border-left-color: #43e97b; }
+        .day-card:nth-child(3) .activity { border-left-color: #fa709a; }
+        .time { font-weight: 700; color: #4facfe; min-width: 70px; font-size: 0.9rem; }
+        .day-card:nth-child(2) .time { color: #43e97b; }
+        .day-card:nth-child(3) .time { color: #fa709a; }
+        .activity-info { flex: 1; }
+        .activity-name { font-weight: 600; color: #2c3e50; font-size: 0.95rem; }
+        .activity-detail { font-size: 0.85rem; color: #666; margin-top: 2px; }
+        .hotel { 
+            background: linear-gradient(135deg, #FFE66D, #FFED4E);
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #2E5090;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        .summary { background: white; border-radius: 15px; padding: 30px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .summary-title { text-align: center; font-size: 1.5rem; color: #2E5090; margin-bottom: 20px; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .summary-card { background: linear-gradient(135deg, #f0f4f8, #e8eef5); padding: 20px; border-radius: 10px; text-align: center; }
+        .summary-value { font-size: 2rem; font-weight: 900; color: #4facfe; }
+        .summary-label { font-size: 0.9rem; color: #666; margin-top: 5px; }
+        .footer { text-align: center; color: white; margin-top: 50px; font-size: 1.2rem; font-weight: 600; }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="header">
-<h1>✈️ MON VOYAGE ALLEMAGNE</h1>
-<p>13 - 15 février 2026 🗺️</p>
-</div>
+    <div class="container">
+        <div class="header">
+            <h1>✈️ MON VOYAGE ALLEMAGNE</h1>
+            <p>13 - 15 février 2026 🗺️</p>
+        </div>
 
-<div class="days-grid">
-<!-- JOUR 1 -->
-<div class="day-card">
-<div class="day-header">
-<div class="day-number">01</div>
-<div class="day-info">
-<div class="day-date">🗓️ Vendredi 13 février</div>
-<div class="day-title">Le Grand Départ</div>
-<div class="day-subtitle">Angoulême → Paris → Munich → Nuremberg</div>
-</div>
-</div>
-<div class="day-content">
-<div class="activity"><div class="time">6h23-8h34</div><div class="activity-info"><div class="activity-name">🚄 Train Angoulême-Paris</div><div class="activity-detail">2h11</div></div></div>
-<div class="activity"><div class="time">~9h15-10h</div><div class="activity-info"><div class="activity-name">🚇 Métro+RER CDG</div><div class="activity-detail">41 min | 14€</div></div></div>
-<div class="activity"><div class="time">10h00</div><div class="activity-info"><div class="activity-name">🚨 Sécurité CDG</div><div class="activity-detail">2h avant embarquement</div></div></div>
-<div class="activity"><div class="time">12h-13h25</div><div class="activity-info"><div class="activity-name">✈️ Vol CDG-Munich</div><div class="activity-detail">1h30 de vol</div></div></div>
-<div class="activity"><div class="time">13h53-14h35</div><div class="activity-info"><div class="activity-name">🚂 S-Bahn Aéroport</div><div class="activity-detail">40 min | 13€/pers</div></div></div>
-<div class="activity"><div class="time">14h45-15h57</div><div class="activity-info"><div class="activity-name">🚄 Train Munich-Nuremberg</div><div class="activity-detail">1h12</div></div></div>
-<div class="activity"><div class="time">15h57-19h</div><div class="activity-info"><div class="activity-name">👣 Visite Nuremberg</div><div class="activity-detail">Château + Hauptmarkt</div></div></div>
-<div class="activity"><div class="time">19h01-20h13</div><div class="activity-info"><div class="activity-name">🚄 Train Nuremberg-Munich</div><div class="activity-detail">1h12</div></div></div>
-<div class="activity"><div class="time">20h45+</div><div class="activity-info"><div class="activity-name">🛏️ Hôtel AMBA</div><div class="activity-detail">Repos!</div></div></div>
-<div class="hotel">🏨 AMBA MUNICH | +49 89 545140</div>
-</div>
-</div>
+        <div class="days-grid">
+            <!-- JOUR 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">01</div>
+                    <div class="day-info">
+                        <div class="day-date">🗓️ Vendredi 13 février</div>
+                        <div class="day-title">Le Grand Départ</div>
+                        <div class="day-subtitle">Angoulême → Paris → Munich → Nuremberg</div>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="activity"><div class="time">6h23-8h34</div><div class="activity-info"><div class="activity-name">🚄 Train Angoulême-Paris</div><div class="activity-detail">2h11</div></div></div>
+                    <div class="activity"><div class="time">~9h15-10h</div><div class="activity-info"><div class="activity-name">🚇 Métro+RER CDG</div><div class="activity-detail">41 min | 14€</div></div></div>
+                    <div class="activity"><div class="time">10h00</div><div class="activity-info"><div class="activity-name">🚨 Sécurité CDG</div><div class="activity-detail">2h avant embarquement</div></div></div>
+                    <div class="activity"><div class="time">12h-13h25</div><div class="activity-info"><div class="activity-name">✈️ Vol CDG-Munich</div><div class="activity-detail">1h30 de vol</div></div></div>
+                    <div class="activity"><div class="time">13h53-14h35</div><div class="activity-info"><div class="activity-name">🚂 S-Bahn Aéroport</div><div class="activity-detail">40 min | 13€/pers</div></div></div>
+                    <div class="activity"><div class="time">14h45-15h57</div><div class="activity-info"><div class="activity-name">🚄 Train Munich-Nuremberg</div><div class="activity-detail">1h12</div></div></div>
+                    <div class="activity"><div class="time">15h57-19h</div><div class="activity-info"><div class="activity-name">👣 Visite Nuremberg</div><div class="activity-detail">Château + Hauptmarkt</div></div></div>
+                    <div class="activity"><div class="time">19h01-20h13</div><div class="activity-info"><div class="activity-name">🚄 Train Nuremberg-Munich</div><div class="activity-detail">1h12</div></div></div>
+                    <div class="activity"><div class="time">20h45+</div><div class="activity-info"><div class="activity-name">🛏️ Hôtel AMBA</div><div class="activity-detail">Repos!</div></div></div>
+                    <div class="hotel">🏨 AMBA MUNICH | +49 89 545140</div>
+                </div>
+            </div>
 
-<!-- JOUR 2 -->
-<div class="day-card">
-<div class="day-header">
-<div class="day-number">02</div>
-<div class="day-info">
-<div class="day-date">🗓️ Samedi 14 février</div>
-<div class="day-title">Le Château Magique</div>
-<div class="day-subtitle">Fussen → Neuschwanstein → Berlin</div>
-</div>
-</div>
-<div class="day-content">
-<div class="activity"><div class="time">7h10-9h42</div><div class="activity-info"><div class="activity-name">🚄 Train Munich-Fussen</div><div class="activity-detail">2h32 | 40€</div></div></div>
-<div class="activity"><div class="time">9h42-13h20</div><div class="activity-info"><div class="activity-name">🥾 Excursion Neuschwanstein</div><div class="activity-detail">Marienbrücke + Randonnée</div></div></div>
-<div class="activity"><div class="time">13h20-15h52</div><div class="activity-info"><div class="activity-name">🚄 Train Fussen-Munich</div><div class="activity-detail">2h32</div></div></div>
-<div class="activity"><div class="time">16h21-20h22</div><div class="activity-info"><div class="activity-name">🚄 Train Munich-Berlin</div><div class="activity-detail">4h01</div></div></div>
-<div class="activity"><div class="time">21h23-21h45</div><div class="activity-info"><div class="activity-name">👣 Reichstag</div><div class="activity-detail">~1,3 km</div></div></div>
-<div class="activity"><div class="time">21h45-22h10</div><div class="activity-info"><div class="activity-name">📸 Porte Brandebourg</div><div class="activity-detail">5 min</div></div></div>
-<div class="activity"><div class="time">22h10-22h55</div><div class="activity-info"><div class="activity-name">👣 Mémorial Holocauste</div><div class="activity-detail">~500 m</div></div></div>
-<div class="activity"><div class="time">~23h</div><div class="activity-info"><div class="activity-name">🛏️ Hôtel easyHotel</div><div class="activity-detail">Journée intense!</div></div></div>
-<div class="hotel">🏨 easyHOTEL BERLIN | +49 30 40006550</div>
-</div>
-</div>
+            <!-- JOUR 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">02</div>
+                    <div class="day-info">
+                        <div class="day-date">🗓️ Samedi 14 février</div>
+                        <div class="day-title">Le Château Magique</div>
+                        <div class="day-subtitle">Fussen → Neuschwanstein → Berlin</div>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="activity"><div class="time">7h10-9h42</div><div class="activity-info"><div class="activity-name">🚄 Train Munich-Fussen</div><div class="activity-detail">2h32 | 40€</div></div></div>
+                    <div class="activity"><div class="time">9h42-13h20</div><div class="activity-info"><div class="activity-name">🥾 Excursion Neuschwanstein</div><div class="activity-detail">Marienbrücke + Randonnée</div></div></div>
+                    <div class="activity"><div class="time">13h20-15h52</div><div class="activity-info"><div class="activity-name">🚄 Train Fussen-Munich</div><div class="activity-detail">2h32</div></div></div>
+                    <div class="activity"><div class="time">16h21-20h22</div><div class="activity-info"><div class="activity-name">🚄 Train Munich-Berlin</div><div class="activity-detail">4h01</div></div></div>
+                    <div class="activity"><div class="time">21h23-21h45</div><div class="activity-info"><div class="activity-name">👣 Reichstag</div><div class="activity-detail">~1,3 km</div></div></div>
+                    <div class="activity"><div class="time">21h45-22h10</div><div class="activity-info"><div class="activity-name">📸 Porte Brandebourg</div><div class="activity-detail">5 min</div></div></div>
+                    <div class="activity"><div class="time">22h10-22h55</div><div class="activity-info"><div class="activity-name">👣 Mémorial Holocauste</div><div class="activity-detail">~500 m</div></div></div>
+                    <div class="activity"><div class="time">~23h</div><div class="activity-info"><div class="activity-name">🛏️ Hôtel easyHotel</div><div class="activity-detail">Journée intense!</div></div></div>
+                    <div class="hotel">🏨 easyHOTEL BERLIN | +49 30 40006550</div>
+                </div>
+            </div>
 
-<!-- JOUR 3 -->
-<div class="day-card">
-<div class="day-header">
-<div class="day-number">03</div>
-<div class="day-info">
-<div class="day-date">🗓️ Dimanche 15 février</div>
-<div class="day-title">Le Retour Heureux</div>
-<div class="day-subtitle">Berlin → Munich → Paris → Angoulême</div>
-</div>
-</div>
-<div class="day-content">
-<div class="activity"><div class="time">8h-9h30</div><div class="activity-info"><div class="activity-name">🥐 Petit-déjeuner Berlin</div></div></div>
-<div class="activity"><div class="time">9h36-14h33</div><div class="activity-info"><div class="activity-name">🚄 Train Berlin-Munich Aéro</div><div class="activity-detail">4h57</div></div></div>
-<div class="activity"><div class="time">14h33-15h15</div><div class="activity-info"><div class="activity-name">🚂 S-Bahn Aéro-Centre</div><div class="activity-detail">42 min</div></div></div>
-<div class="activity"><div class="time">15h30-17h05</div><div class="activity-info"><div class="activity-name">☕ Pause aéroport</div><div class="activity-detail">Shopping</div></div></div>
-<div class="activity"><div class="time">17h05-18h40</div><div class="activity-info"><div class="activity-name">✈️ Vol Munich-Paris CDG</div><div class="activity-detail">1h35</div></div></div>
-<div class="activity"><div class="time">18h40-19h30</div><div class="activity-info"><div class="activity-name">🚇 RER B CDG-Paris</div><div class="activity-detail">~50 min</div></div></div>
-<div class="activity"><div class="time">19h30-21h40</div><div class="activity-info"><div class="activity-name">🚄 Train Paris-Angoulême</div><div class="activity-detail">2h10</div></div></div>
-<div class="activity"><div class="time">23h50</div><div class="activity-info"><div class="activity-name">🏡 Arrivée Angoulême</div><div class="activity-detail">FIN! 🎉</div></div></div>
-<div class="hotel">✨ FIN DU VOYAGE</div>
-</div>
-</div>
-</div>
+            <!-- JOUR 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">03</div>
+                    <div class="day-info">
+                        <div class="day-date">🗓️ Dimanche 15 février</div>
+                        <div class="day-title">Le Retour Heureux</div>
+                        <div class="day-subtitle">Berlin → Munich → Paris → Angoulême</div>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <div class="activity"><div class="time">8h-9h30</div><div class="activity-info"><div class="activity-name">🥐 Petit-déjeuner Berlin</div></div></div>
+                    <div class="activity"><div class="time">9h36-14h33</div><div class="activity-info"><div class="activity-name">🚄 Train Berlin-Munich Aéro</div><div class="activity-detail">4h57</div></div></div>
+                    <div class="activity"><div class="time">14h33-15h15</div><div class="activity-info"><div class="activity-name">🚂 S-Bahn Aéro-Centre</div><div class="activity-detail">42 min</div></div></div>
+                    <div class="activity"><div class="time">15h30-17h05</div><div class="activity-info"><div class="activity-name">☕ Pause aéroport</div><div class="activity-detail">Shopping</div></div></div>
+                    <div class="activity"><div class="time">17h05-18h40</div><div class="activity-info"><div class="activity-name">✈️ Vol Munich-Paris CDG</div><div class="activity-detail">1h35</div></div></div>
+                    <div class="activity"><div class="time">18h40-19h30</div><div class="activity-info"><div class="activity-name">🚇 RER B CDG-Paris</div><div class="activity-detail">~50 min</div></div></div>
+                    <div class="activity"><div class="time">19h30-21h40</div><div class="activity-info"><div class="activity-name">🚄 Train Paris-Angoulême</div><div class="activity-detail">2h10</div></div></div>
+                    <div class="activity"><div class="time">23h50</div><div class="activity-info"><div class="activity-name">🏡 Arrivée Angoulême</div><div class="activity-detail">FIN! 🎉</div></div></div>
+                    <div class="hotel">✨ FIN DU VOYAGE</div>
+                </div>
+            </div>
+        </div>
 
-<div class="summary">
-<h2 class="summary-title">📊 Résumé du voyage</h2>
-<div class="summary-grid">
-<div class="summary-card">
-<div class="summary-value">3</div>
-<div class="summary-label">Jours</div>
-</div>
-<div class="summary-card">
-<div class="summary-value">2</div>
-<div class="summary-label">Hôtels</div>
-</div>
-<div class="summary-card">
-<div class="summary-value">∞</div>
-<div class="summary-label">Souvenirs</div>
-</div>
-<div class="summary-card">
-<div class="summary-value">🚄🚂✈️</div>
-<div class="summary-label">Transport</div>
-</div>
-</div>
-</div>
+        <div class="summary">
+            <h2 class="summary-title">📊 Résumé du voyage</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">Jours</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">2</div>
+                    <div class="summary-label">Hôtels</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">∞</div>
+                    <div class="summary-label">Souvenirs</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">🚄🚂✈️</div>
+                    <div class="summary-label">Transport</div>
+                </div>
+            </div>
+        </div>
 
-<div class="footer">
-✨ Bon voyage et amusez-vous bien en Allemagne ! 🎉
-</div>
-</div>
+        <div class="footer">
+            ✨ Bon voyage et amusez-vous bien en Allemagne ! 🎉
+        </div>
+    </div>
 </body>
 </html>
